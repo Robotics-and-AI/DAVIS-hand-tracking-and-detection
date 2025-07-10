@@ -15,7 +15,7 @@ This repository contributes with code to track and detect a human hand using a D
 `TrackingOnly.java` - Implemets tracking algorithm  
 `TrackingOnlyUDP.java` - Extension of TrackingOnly to transmit tracking output through UDP  
 
-**Requires:**  
+**Requirements:**  
 - A <a href="https://docs.inivation.com/_static/hardware_guides/davis240.pdf">DAVIS240C event camera</a> **OR** DAVIS data in the .aedat format
 - The <a href="http://jaerproject.org">jAER open-source software</a> to apply the tracking and detection algorithms on the event data
 
