@@ -1,8 +1,3 @@
-/*
- * eCAMShiftDetection.java
- *
- * Created on June 18, 2024
- */
 
  package net.sf.jaer.eventprocessing.tracking;
 
@@ -40,7 +35,7 @@
 
 @Description("Tracks a single moving object with stationary camera")
 @DevelopmentStatus(DevelopmentStatus.Status.InDevelopment)
-public class eCAMShiftDetection extends EventFilter2D implements FrameAnnotater {
+public class TrackingAndDetection extends EventFilter2D implements FrameAnnotater {
 
 
     // 1. Global parameters
@@ -73,8 +68,8 @@ public class eCAMShiftDetection extends EventFilter2D implements FrameAnnotater 
     private int[][] evCountGrid; // Number of events at each y coordinate
     Queue<int[]> eventQueue = new LinkedList<>(); // Initialization of event queue
     
-    // eCAMShiftDetection class constructor
-    public eCAMShiftDetection(AEChip chip) {
+    // TrackingAndDetection class constructor
+    public TrackingAndDetection(AEChip chip) {
         super(chip);
         this.chip = chip;
         setTooltips(); // Prepares gui
@@ -107,7 +102,7 @@ public class eCAMShiftDetection extends EventFilter2D implements FrameAnnotater 
         resetGlobalVars();
         fileCounter = fileCounter + 1;
         fileName = desktopPath + Integer.toString(fileCounter) + ".txt";       
-        log.warning("eCAMShiftDetection has been reset");
+        log.warning("TrackingAndDetection has been reset");
     }
     
     public final void resetPacketVars(){

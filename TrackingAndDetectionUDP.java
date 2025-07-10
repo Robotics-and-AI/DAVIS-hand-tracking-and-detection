@@ -1,8 +1,3 @@
-/*
- * eCAMShiftUDP.java
- *
- * Created on May 14, 2024, 12:36 AM
- */
 
  package net.sf.jaer.eventprocessing.tracking;
 
@@ -23,7 +18,7 @@ import static net.sf.jaer.eventprocessing.EventFilter.log;
  */
  
 @Description("Object tracker that sends cluster info to remote host about tracked clusters")
-public class eCAMShiftUDP extends eCAMShift {
+public class TrackingAndDetectionUDP extends TrackingAndDetection {
 
     protected DatagramChannel channel = null;
     protected DatagramSocket socket = null;
@@ -31,7 +26,7 @@ public class eCAMShiftUDP extends eCAMShift {
     protected int port = getInt("port", 65432);
     InetSocketAddress client = null;
  
-    public eCAMShiftUDP(AEChip chip) {
+    public TrackingAndDetectionUDP(AEChip chip) {
         super(chip);
         String s="  remote host";
         setPropertyTooltip(s, "port", "port to send to on remote host");
