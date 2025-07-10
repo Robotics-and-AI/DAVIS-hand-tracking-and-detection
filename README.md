@@ -8,6 +8,8 @@ This repository contributes with code to track and detect a human hand using a D
 
 ## Deployment
 
+The [Event-based Dataset of Assembly Tasks (EDAT24)](https://zenodo.org/records/10688518) is recommended as testing data (available in *.aedat* and *.npy* formats).
+
 ### jAER code
 
 `TrackingAndDetection.java` - Implements both tracking and detection algorithms  
@@ -16,7 +18,7 @@ This repository contributes with code to track and detect a human hand using a D
 `TrackingOnlyUDP.java` - Extension of TrackingOnly to transmit tracking output through UDP  
 
 **Requirements:**  
-- A <a href="https://docs.inivation.com/_static/hardware_guides/davis240.pdf">DAVIS240C event camera</a> **OR** DAVIS data in the .aedat format
+- A <a href="https://docs.inivation.com/_static/hardware_guides/davis240.pdf">DAVIS240C event camera</a> **OR** DAVIS data in the *.aedat* format
 - The <a href="http://jaerproject.org">jAER open-source software</a> to apply the tracking and detection algorithms on the event data
 
 **Deployment:**  
@@ -29,11 +31,28 @@ This repository contributes with code to track and detect a human hand using a D
 8. Return to the `Overview` tab and choose the desired tracking mode by selecting the corresponding box  
 9. In the `Overview` tab, select `Controls` to alter the parameters of the corresponding tracking and detection algorithm as required  
 
-### Python code
-**Requires:**
-- DAVIS data in the .npy format
+---
 
-Placeholder text
+### Python code
+
+`PythonTrackingAndDetection.py` - Implements both tracking and detection algorithms  
+
+**Requirements:**
+- DAVIS data in the *.npy* format
+
+**Deployment:**  
+1. Create a folder structure as follows, with `PythonTrackingAndDetection.py` provided by this repository
+```bash
+└── Code
+    ├── npyfiles
+    │   └── ...
+    └── PythonTrackingAndDetection.py
+```
+2. Insert the desired *.npy* DAVIS data files into the `...\Code\npyfiles` folder
+3. Run the `PythonTrackingAndDetection.py` Python file
+   - The algorithm will display the tracking results on a frame created through batching the event data in fixed time intervals
+   - To alter the parameters of the tracking and detection algorithm as required, change the values in the *__init__* method of the *EventProcessor* Class
+   - The tracking algorithm output, if required, can be accessed through the variable *file_features* inside the *perform_tracking* method
 
 ## Cite our paper
 If you've found this work useful for your research, please cite our paper as follows
