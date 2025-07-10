@@ -8,13 +8,13 @@ This repository contributes with code to track and detect a human hand using a D
 
 ## Deployment
 
-The [Event-based Dataset of Assembly Tasks (EDAT24)](https://zenodo.org/records/10688518) is recommended as testing data (available in *.aedat* and *.npy* formats).
+The [Event-based Dataset of Assembly Tasks (EDAT24)](https://zenodo.org/records/10688518) is recommended as testing data (available in *.aedat* and *.npy* formats)
 
 ### jAER code
 
 `TrackingAndDetection.java` - Implements both tracking and detection algorithms  
 `TrackingAndDetectionUDP.java` - Extension of TrackingAndDetection to transmit tracking output through UDP  
-`TrackingOnly.java` - Implemets tracking algorithm  
+`TrackingOnly.java` - Implements tracking algorithm  
 `TrackingOnlyUDP.java` - Extension of TrackingOnly to transmit tracking output through UDP  
 
 **Requirements:**  
@@ -51,8 +51,8 @@ The [Event-based Dataset of Assembly Tasks (EDAT24)](https://zenodo.org/records/
 2. Insert the desired *.npy* DAVIS data files into the `...\Code\npyfiles` folder
 3. Run the `PythonTrackingAndDetection.py` Python file
    - The algorithm will display the tracking results on a frame created through batching the event data in fixed time intervals
-   - To alter the parameters of the tracking and detection algorithm as required, change the values in the *__init__* method of the *EventProcessor* Class
-   - The tracking algorithm output, if required, can be accessed through the variable *file_features* inside the *perform_tracking* method
+   - To alter the parameters of the tracking and detection algorithm as required, change the values in the *\_\_init\_\_* method of the *EventProcessor* Class
+   - The tracking algorithm output can be accessed through the variable *file_features* inside the *perform_tracking* method
 
 ## Cite our paper
 If you've found this work useful for your research, please cite our paper as follows
