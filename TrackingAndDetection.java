@@ -248,7 +248,6 @@ public class TrackingAndDetection extends EventFilter2D implements FrameAnnotate
                 // Gaussian low-pass filter - use half of the window radius as D0
                 int ratioWindowRadius = (int) Math.floor(windowRadius/2);
                 alphaXY = (float) Math.exp(-(distance*distance)/(2*ratioWindowRadius*ratioWindowRadius));
-                alphaXY = (float)(alphaXY-0.2);
                 
                 dispX = (int)(centreX * alphaXY + avgX * (1-alphaXY) - centreX);
                 dispY = (int)(centreY * alphaXY + avgY * (1-alphaXY) - centreY);

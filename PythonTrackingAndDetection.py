@@ -253,7 +253,7 @@ class Cluster:
             self.disp_y = 0
         else:
             ratio_radius = math.floor(self.search_radius/2)
-            alpha = math.exp((-distance*distance)/(2*ratio_radius*ratio_radius))-0.2
+            alpha = math.exp((-distance*distance)/(2*ratio_radius*ratio_radius))
 
             self.disp_x = round(self.center_x * alpha + avg_x*(1-alpha) - self.center_x)
             self.disp_y = round(self.center_y * alpha + avg_y*(1-alpha) - self.center_y)
