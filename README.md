@@ -58,12 +58,12 @@ The [Event-based Dataset of Assembly Tasks (EDAT24)](https://zenodo.org/records/
 If you've found this work useful for your research, please cite our paper as follows
 
 ```
-@article{Duarte2025,
+@article{Duarte26,
 author = {Duarte, L., Polito, M., Gastaldi, L., Pastorelli, S. and Neto, P},
-doi = {-},
-journal = {-},
-title = {{Real-time human hand tracking and detection from event camera data}},
-year = {2025}}
+doi = {10.1109/JSEN.2026.3729077},
+journal = {IEEE Sensors Journal},
+title = {Real-time human hand tracking and detection from event camera data},
+year = {2026}}
 ```
 
 
